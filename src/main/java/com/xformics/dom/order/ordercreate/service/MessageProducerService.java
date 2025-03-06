@@ -18,7 +18,7 @@ public class MessageProducerService {
 
     public void sendOrder(Order order) throws Exception {
         String orderJson = objectMapper.writeValueAsString(order);
-        System.out.println("orderJson: "+orderJson);
+        System.out.println("orderJson is: "+orderJson);
         pubSubTemplate.publish("order-topic", orderJson);
     }
 }

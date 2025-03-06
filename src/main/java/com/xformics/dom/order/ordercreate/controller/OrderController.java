@@ -17,7 +17,7 @@ public class OrderController {
 
     @PostMapping
     public String createOrder(@RequestBody String rawJson) throws Exception {
-        System.out.println("Raw JSON from UI: " + rawJson);  // ✅ Logs raw JSON
+        System.out.println("Raw JSON from UI is: " + rawJson);  // ✅ Logs raw JSON
 
         ObjectMapper objectMapper = new ObjectMapper();
         Order order = objectMapper.readValue(rawJson, Order.class);
